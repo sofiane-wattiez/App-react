@@ -8,10 +8,9 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ flex: 1, backgroundColor: '#AD160F' }} />
-      <View style={{ flex: 0.5, backgroundColor: '#000000' }} />
-      <View style={{ flex: 3, backgroundColor: '#511201' }} />
-      <NavBar style={{ flex: 1 }}/>
+      
+
+      <NavBar style={{ flex: 4 }}/>
     </View>
     
   );
