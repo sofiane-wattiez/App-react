@@ -1,13 +1,13 @@
 import React from 'react';
-const Menu = () =>{
+const White = () =>{
   return (
     <div>
-      <h3>RED</h3>
+      <h3>WHITE</h3>
       <div>
         
       </div>
     </div>
   );
 }
-export default Menu;
+export default White;
 
