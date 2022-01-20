@@ -1,11 +1,16 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 
 const Rose = () =>{
 
   return (
     <View style={{ flex: 1  , backgroundColor: '#F8E8E8'}}>
-      <Text style={styles.h1}>Di wino</Text>
+      <View  style={{ flex: 2, justifyContent: 'center', alignItems: 'center', flexDirection:'row'  }}>
+        <Image
+          style={styles.logo}
+          source={require('../assets/logo/logo_dark_mode.png')}
+        /> 
+      </View>
       <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center', flexDirection:'row' }}>
         <Text  style={{ color: '#AD160F', fontSize: 30 }}>Les vins</Text> 
         <Text  style={{ color: '#AD160F', fontSize: 80 }}>Rosés</Text>
@@ -19,6 +24,14 @@ const styles = StyleSheet.create({
     fontSize: 80,
     paddingLeft:  10,
     color: '#ffffff'
+    },
+  
+    logo: {
+      width: 150,
+      height: 80,
+      margin: 40,
+      alignContent: 'center',
+      justifyContent: 'center'
     }
 });
 
