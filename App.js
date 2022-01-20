@@ -4,13 +4,15 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavigationBar/NavBar';
 
 
-export default function App() {
 
+
+
+export default function App() {
+ 
   return (
     <View style={{ flex: 1 }}>
-      <NavBar style={{ flex: 4}}/>
+      <NavBar style={{ flex: 4 }}/>
     </View>
-    
   );
 }
 

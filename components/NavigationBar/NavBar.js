@@ -6,6 +6,10 @@ import { Ionicons } from '@expo/vector-icons';
 import WineRed from '../../navigation/WineRed.js';
 import WineRose from '../../navigation/WineRose.js';
 import WineWhite from '../../navigation/WineWhite.js';
+import HomeScreen from '../../navigation/HomeScreen.js';
+
+
+
 
 
 // Home page setting
@@ -21,11 +25,13 @@ function HomeScreen() {
   );
 }
 
+
 const Tab = createBottomTabNavigator();
 
 export default function NavBar() {
   return (
     <NavigationContainer style={{ flex: 1 }}>
+
       <Tab.Navigator style={{ flex: 2}}
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
@@ -73,6 +79,7 @@ export default function NavBar() {
         <Tab.Screen name="Rouge" component={WineRed}  />
         <Tab.Screen name="Blanc" component={WineWhite} />
         <Tab.Screen name="Rosé" component={WineRose}  />
+
       </Tab.Navigator>
     </NavigationContainer>
   );
