@@ -11,58 +11,75 @@ import HomeScreen from '../../navigation/HomeScreen.js';
 
 
 
+
+// Home page setting
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ color: '#AD160F', fontSize: '10px' }}>Bienvenue dans votre application d'œnologie</Text>
+        <Text style={{ color: '#AD160F', fontSize: '80px' }}>Di' wino </Text>
+      </View>
+      
+    </View>
+  );
+}
+
+
 const Tab = createBottomTabNavigator();
 
 export default function NavBar() {
   return (
     <NavigationContainer style={{ flex: 1 }}>
-      <Tab.Navigator 
-           screenOptions={({ route }) => ({
+
+      <Tab.Navigator style={{ flex: 2}}
+          screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
-              if (route.name === 'Home') {
+              if (route.name === 'Accueil') {
                 return (
                   <Ionicons
-                    name={focused ? 'home' : 'home'}
+                    name={focused ? 'home' : 'home-outline'}
                     size={size}
-                    color={'#000000'}
+                    color={focused ? '#AD160F' : 'grey' }
                   />
                 );
-              } else if (route.name === "Wine red") {
+              } else if (route.name === 'Rouge') {
                 return (
                   <Ionicons
-                    name={focused ? 'wine' : 'wine'}
+                    name={focused ? 'wine' : 'wine-outline'}
                     size={size}
-                    color={'#DC143C'}
+                    color={focused ? '#511201' : 'grey' }
                   />
                 );
-              }  else if (route.name === 'Wine white') {
+              }  else if (route.name === 'Blanc') {
                 return (
                   <Ionicons
-                    name={focused ? 'wine' : 'wine'}
+                    name={focused ?  'wine' : 'wine-outline'}
                     size={size}
-                    color={'#ffdc86'}
+                    color={focused ? '#F2E5BD' : 'grey' }
                   />
                 );
-              } else if (route.name === 'Wine rose') {
+              } else if (route.name === 'Ros\u00e9') {
               return (
                 <Ionicons
-                  name={focused ? 'wine' : 'wine'}
+                  name={focused ?  'wine' : 'wine-outline'}
                   size={size}
-                  color={'#e7a6c6'}
-                />
+                  color={focused ? '#F8E8E8' : 'grey' }
+                  />
               );
             }
-
+              
             },
-            tabBarInactiveTintColor: 'black',
-            tabBarActiveTintColor: 'tomato',
+            tabBarInactiveTintColor: 'grey',
+            tabBarActiveTintColor: 'black',
           })}
       
       >
-        <Tab.Screen name="Home" component={HomeScreen}  />
-        <Tab.Screen name="Wine red" component={WineRed}  />
-        <Tab.Screen name="Wine white" component={WineWhite} />
-        <Tab.Screen name="Wine rose" component={WineRose}  />
+        <Tab.Screen name="Accueil" component={HomeScreen} />
+        <Tab.Screen name="Rouge" component={WineRed}  />
+        <Tab.Screen name="Blanc" component={WineWhite} />
+        <Tab.Screen name="Rosé" component={WineRose}  />
+
       </Tab.Navigator>
     </NavigationContainer>
   );
