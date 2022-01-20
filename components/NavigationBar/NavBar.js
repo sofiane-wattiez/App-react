@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
@@ -24,7 +24,7 @@ export default function NavBar() {
               return (
                 <Ionicons
                   name={focused ? 'home' : 'ellipse-sharp'}
-                  size={focused ?  35 : 10 }
+                  size={focused ?  35 : 20 }
                   color={focused ? '#AD160F' : '#AD160F' }
                 />
               );
@@ -32,7 +32,7 @@ export default function NavBar() {
               return (
                 <Ionicons
                   name={focused ? 'wine' : 'ellipse-sharp'}
-                  size={focused ?  35 : 10 }
+                  size={focused ?  35 : 20 }
                   color={focused ? '#511201' : '#511201' }
                 />
               );
@@ -40,7 +40,7 @@ export default function NavBar() {
               return (
                 <Ionicons
                   name={focused ?  'wine' : 'ellipse-sharp'}
-                  size={focused ?  35 : 10 }
+                  size={focused ?  35 : 20 }
                   color={focused ? '#F2E5BD' : '#F2E5BD' }
                 />
               );
@@ -48,7 +48,7 @@ export default function NavBar() {
             return (
               <Ionicons
                 name={focused ?  'wine' :  'ellipse-sharp'}
-                size={focused ?  35 : 10 }
+                size={focused ?  35 : 20 }
                 color={focused ? '#F8E8E8' : '#F8E8E8' }
                 />
             );
