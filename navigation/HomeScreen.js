@@ -7,13 +7,12 @@ const HomeScreen = () =>{
 
   return (
    
-
-  <View style={{ flex: 1,  backgroundColor: '#ffff'}}>
+    <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
     <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
-      <SearchMain/>
-      
+      <Text style={{ color: '#AD160F'}}>Bienvenue dans votre application d'œnologie</Text>
+      <Text style={{ color: '#AD160F' }}>Di' wino </Text>
     </View>
-    <View style={{ flex: 1 }}></View>
+    
   </View>
     
   );
