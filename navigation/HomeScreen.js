@@ -18,6 +18,7 @@ import { Text, View, Image, StyleSheet,  } from 'react-native';
         </View>
         );
     }
+    
     const styles = StyleSheet.create({
         h1: {
             fontSize: 80,
