@@ -1,24 +1,16 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import HomeScreen from '../../navigation/HomeScreen'
 import WineRed from '../../navigation/WineRed.js';
 import WineRose from '../../navigation/WineRose.js';
 import WineWhite from '../../navigation/WineWhite.js';
 
 
 // Home page setting - props ContextState
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
-      <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ color: '#AD160F', fontSize: 30}}>Bienvenue dans votre application d'œnologie</Text>
-        <Text style={{ color: '#AD160F', fontSize: 80 }}>Di' wino </Text>
-      </View>
-    </View>
-  );
-}
+
 
 const Tab = createBottomTabNavigator();
 
