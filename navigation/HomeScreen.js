@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet,  } from 'react-native';
+import GetApi from './api/GetApi';
     
 
     const HomeScreen = () => {
@@ -12,6 +13,7 @@ import { Text, View, Image, StyleSheet,  } from 'react-native';
             /> 
             </View>   
             <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
+               
             <Text style={{ color: '#AD160F', fontSize: 30}}>Bienvenue dans votre application d'œnologie</Text>
             <Text style={{ color: '#AD160F', fontSize: 80 }}>Di' wino </Text>
             </View>
