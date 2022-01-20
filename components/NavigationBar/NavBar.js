@@ -8,13 +8,13 @@ import WineRose from '../../navigation/WineRose.js';
 import WineWhite from '../../navigation/WineWhite.js';
 
 
-// Home page setting
+// Home page setting - props ContextState
 function HomeScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
       <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
         <Text style={{ color: '#AD160F', fontSize: 30}}>Bienvenue dans votre application d'œnologie</Text>
-        <Text style={{ color: '#AD160F'}}>Di' wino </Text>
+        <Text style={{ color: '#AD160F', fontSize: 80 }}>Di' wino </Text>
       </View>
     </View>
   );
