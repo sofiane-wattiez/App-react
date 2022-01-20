@@ -13,7 +13,9 @@ const Red = () =>{
         style={styles.logo}
         source={require('../assets/logo/logo_dark_mode.png')}
       /> 
-    </View>     
+    </View> 
+      
+    
     <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center', flexDirection:'row'  }}>
       <Text style={{ color: '#AD160F', fontSize: 30 }}>Les vins </Text>
       <Text style={{ color: '#AD160F', fontSize: 80 }}>Rouges</Text>
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
       fontSize: 80,
       color: '#ffffff',
     },
-  
+
   logo: {
     width: 150,
     height: 80,
