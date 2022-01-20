@@ -11,8 +11,10 @@ import WineWhite from '../../navigation/WineWhite.js';
 // Home page setting
 function HomeScreen() {
   return (
+  
     <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
       <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
+      
         <Text style={{ color: '#AD160F', fontSize: 30}}>Bienvenue dans votre application d'œnologie</Text>
         <Text style={{ color: '#AD160F'}}>Di' wino </Text>
       </View>
@@ -32,7 +34,7 @@ export default function NavBar() {
               return (
                 <Ionicons
                   name={focused ? 'home' : 'ellipse-sharp'}
-                  size={focused ?  35 : 10 }
+                  size={focused ?  35 : 20 }
                   color={focused ? '#AD160F' : '#AD160F' }
                 />
               );
@@ -40,7 +42,7 @@ export default function NavBar() {
               return (
                 <Ionicons
                   name={focused ? 'wine' : 'ellipse-sharp'}
-                  size={focused ?  35 : 10 }
+                  size={focused ?  35 : 20 }
                   color={focused ? '#511201' : '#511201' }
                 />
               );
@@ -48,7 +50,7 @@ export default function NavBar() {
               return (
                 <Ionicons
                   name={focused ?  'wine' : 'ellipse-sharp'}
-                  size={focused ?  35 : 10 }
+                  size={focused ?  35 : 20 }
                   color={focused ? '#F2E5BD' : '#F2E5BD' }
                 />
               );

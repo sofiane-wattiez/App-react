@@ -11,7 +11,7 @@ export default function App() {
  
   return (
     <View style={{ flex: 1 }}>
-      <NavBar style={{ flex: 4 }}/>
+      <NavBar />
     </View>
   );
 }
