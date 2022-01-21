@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image  ,Button} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -10,6 +10,10 @@ function HomeHelloScreen() {
     return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Home -Hello- Screen</Text>
+
+        <Button>Home</Button>
+        <Button>TEST</Button>
+        <Button>SCREEN</Button>
     </View>
     );
 }
@@ -22,6 +26,13 @@ function LogoTitle() {
         source={require('../assets/logo/logo_light-mode.png')}    />
     );
 }
+
+// Login 
+// function Login() {
+//     return(
+
+//     );
+// }
 
 const Stack = createNativeStackNavigator();
 
