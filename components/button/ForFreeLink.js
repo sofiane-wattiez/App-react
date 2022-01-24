@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button } from 'react-native-elements';
-import { View} from 'react-native';
+import { View } from 'react-native';
+import NavBar from '../NavigationBar/NavBar';
 
 const ForFreeLink = () => {
+   
     return (
     <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}> 
         <Button
+            onPress={() => console.log('hello')}
             title="Essai gratuit"
             buttonStyle={{
             borderColor: '#AD160F',
@@ -17,7 +20,7 @@ const ForFreeLink = () => {
             marginHorizontal: 50,
             marginVertical: 10,
             }}
-          />
+        />
     </View>
     );
 }

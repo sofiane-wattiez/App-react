@@ -3,8 +3,7 @@ import RegisterLink from '../button/RegisterLink';
 import LoginLink from '../button/LoginLink';
 import ForFreeLink from '../button/ForFreeLink';
 import Separator from '../layout/Separator';
-// import NavBar from '../NavigationBar/NavBar';
-import { View} from 'react-native';
+import { View } from 'react-native';
 
 
 
