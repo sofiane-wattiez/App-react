@@ -1,6 +1,5 @@
-
-import { StyleSheet, Text, View, Button } from 'react-native';
-import React, { useState, useEffect } from 'react';
+import { View } from 'react-native';
+import React from 'react';
 // import NavBar from './components/NavigationBar/NavBar';
 import HomeHelloScreen from './components/HelloPage';
 
