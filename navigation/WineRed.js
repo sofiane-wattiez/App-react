@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet,  } from 'react-native';
-
+// import Articles from '../components/MainContent/articles';
 
 
 
@@ -19,6 +19,7 @@ const Red = () =>{
     <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center', flexDirection:'row'  }}>
       <Text style={{ color: '#AD160F', fontSize: 30 }}>Les vins </Text>
       <Text style={{ color: '#AD160F', fontSize: 80 }}>Rouges</Text>
+      {/* <Articles /> */}
     </View>
   </View>
   

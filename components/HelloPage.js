@@ -1,16 +1,24 @@
 import * as React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeLink from '../components/MainContent/HomeLink';
 
-// Cette page va être notre page d'atterrissage index
 
-//Composition - visuel rendu 
+// Cette page est notre page d'atterrissage (index in app.js)
+
+//Composition - visuel rendu Q
 function HomeHelloScreen() {
     return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home -Hello- Screen</Text>
+    <View style={{ flex: 3, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ flex: 0.25, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+            <Text>HomeHelloScreen</Text>
+        </View>
+        <View  style={{ flex: 0.5, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+            <HomeLink />   
+        </View>
     </View>
+        
     );
 }
 
@@ -18,8 +26,10 @@ function HomeHelloScreen() {
 function LogoTitle() {
     return (
         <Image
-        style={{ width: 100, height: 50 }}
-        source={require('../assets/logo/logo_light-mode.png')}    />
+            style={{ width: 100, height: 60 }}
+            source={require('../assets/logo/logo_light-mode.png')}  
+            containerStyle={styles.background}
+        />
     );
 }
 
@@ -29,23 +39,21 @@ const Stack = createNativeStackNavigator();
 function AppHome() {
     return (
         <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen
-            name="Home"
-            component={HomeHelloScreen}
-            options={{ headerTitle: (props) => <LogoTitle {...props} /> }}
-            />
-        </Stack.Navigator>
+            <Stack.Navigator>
+                <Stack.Screen
+                    style={styles.background}
+                    name="HomeLink"
+                    component={HomeHelloScreen}
+                    options={{ headerTitle: (props) => <LogoTitle {...props} /> }}
+                />
+                </Stack.Navigator>  
         </NavigationContainer>
     );
 }
+const styles = StyleSheet.create({
+    background: {
+        backgroundColor: '#F2E5BD',
+    }
+});
 
 export default AppHome;
-
-
-
-
-// Se connecter (pro account => login | new inscription => register)
-
-
-// Continuer sans inscription (free user)

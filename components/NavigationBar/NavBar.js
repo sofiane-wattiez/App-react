@@ -1,17 +1,15 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+// import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from '../../navigation/HomeScreen'
-import WineRed from '../../navigation/WineRed.js';
-import WineRose from '../../navigation/WineRose.js';
-import WineWhite from '../../navigation/WineWhite.js';
+import WineRed from '../../navigation/WineRed';
+import WineRose from '../../navigation/WineRose';
+import WineWhite from '../../navigation/WineWhite';
 
 
 // Home page setting - props ContextState
-
-
 const Tab = createBottomTabNavigator();
 
 export default function NavBar() {

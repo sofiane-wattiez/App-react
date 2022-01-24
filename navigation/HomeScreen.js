@@ -12,8 +12,8 @@ import { Text, View, Image, StyleSheet,  } from 'react-native';
             /> 
             </View>   
             <View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={{ color: '#AD160F', fontSize: 30}}>Bienvenue dans votre application d'œnologie</Text>
-            <Text style={{ color: '#AD160F', fontSize: 80 }}>Di' wino </Text>
+                <Text style={{ color: '#AD160F', fontSize: 30}}>Bienvenue dans votre application d'œnologie</Text>
+                <Text style={{ color: '#AD160F', fontSize: 80 }}>Di' wino </Text>
             </View>
         </View>
         );
@@ -26,11 +26,11 @@ import { Text, View, Image, StyleSheet,  } from 'react-native';
         },
         
         logo: {
-        width: 150,
-        height: 80,
-        margin: 40,
-        alignContent: 'center',
-        justifyContent: 'center'
+            width: 150,
+            height: 80,
+            margin: 40,
+            alignContent: 'center',
+            justifyContent: 'center'
         }
     });
 
