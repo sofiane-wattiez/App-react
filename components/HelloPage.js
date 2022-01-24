@@ -2,19 +2,18 @@ import * as React from 'react';
 import { View, Text, Image  ,Button} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { CallApi } from '../api/CallApi';
 
-// Cette page va être notre page d'atterrissage index
 
 //Composition - visuel rendu 
 function HomeHelloScreen() {
     return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Home -Hello- Screen</Text>
-
-        <Button>Home</Button>
-        <Button>TEST</Button>
-        <Button>SCREEN</Button>
+        
+       
     </View>
+   
     );
 }
 
@@ -27,12 +26,6 @@ function LogoTitle() {
     );
 }
 
-// Login 
-// function Login() {
-//     return(
-
-//     );
-// }
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +41,7 @@ function AppHome() {
             />
         </Stack.Navigator>
         </NavigationContainer>
+        
     );
 }
 
