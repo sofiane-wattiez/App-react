@@ -3,6 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeLink from '../components/MainContent/HomeLink';
+import Icon from '../components/Icon/Icon';
 
 
 // Cette page est notre page d'atterrissage (index in app.js)
@@ -12,7 +13,7 @@ function HomeHelloScreen() {
     return (
     <View style={{ flex: 3, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
         <View style={{ flex: 0.25, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
-            <Text>HomeHelloScreen</Text>
+            <Icon/>
         </View>
         <View  style={{ flex: 0.5, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
             <HomeLink />   
