@@ -8,7 +8,6 @@ import WineRed from '../../navigation/WineRed';
 import WineRose from '../../navigation/WineRose';
 import WineWhite from '../../navigation/WineWhite';
 
-
 // Home page setting - props ContextState
 const Tab = createBottomTabNavigator();
 
@@ -18,11 +17,11 @@ export default function NavBar() {
       <Tab.Navigator style={{ flex: 1}}
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, size, color }) => {
-              if (route.name === 'Win\'Home') {
+              if (route.name === 'Accueil') {
                 return (
                   <Ionicons
                     name={focused ? 'home' : 'ellipse-sharp'}
-                    size={focused ?  35 : 20 }
+                    size={focused ?  30 : 20 }
                     color={focused ? '#AD160F' : '#AD160F' }
                   />
                 );
@@ -30,7 +29,7 @@ export default function NavBar() {
                 return (
                   <Ionicons
                     name={focused ? 'wine' : 'ellipse-sharp'}
-                    size={focused ?  35 : 20 }
+                    size={focused ?  30 : 20 }
                     color={focused ? '#511201' : '#511201' }
                   />
                 );
@@ -38,7 +37,7 @@ export default function NavBar() {
                 return (
                   <Ionicons
                     name={focused ?  'wine' : 'ellipse-sharp'}
-                    size={focused ?  35 : 20 }
+                    size={focused ?  30 : 20 }
                     color={focused ? '#F2E5BD' : '#F2E5BD' }
                   />
                 );
@@ -46,7 +45,7 @@ export default function NavBar() {
               return (
                 <Ionicons
                   name={focused ?  'wine' :  'ellipse-sharp'}
-                  size={focused ?  35 : 20 }
+                  size={focused ?  30 : 20 }
                   color={focused ? '#F8E8E8' : '#F8E8E8' }
                   />
               );
@@ -59,11 +58,12 @@ export default function NavBar() {
 
       >
         
-        <Tab.Screen name="Win'Home" component={HomeScreen} />
+        <Tab.Screen name="Accueil" component={HomeScreen}/>
         <Tab.Screen name="Rouge" component={WineRed}  />
         <Tab.Screen name="Blanc" component={WineWhite} />
         <Tab.Screen name="Rosé" component={WineRose}  />
       </Tab.Navigator>    
+  
     </NavigationContainer>
   );
 } 

@@ -8,7 +8,7 @@ import Icon from '../components/Icon/Icon';
 
 // Cette page est notre page d'atterrissage (index in app.js)
 
-//Composition - visuel rendu Q
+// Composition - visuel final 
 function HomeHelloScreen() {
     return (
     <View style={{ flex: 3, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
@@ -51,6 +51,7 @@ function AppHome() {
         </NavigationContainer>
     );
 }
+
 const styles = StyleSheet.create({
     background: {
         backgroundColor: '#F2E5BD',

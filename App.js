@@ -11,9 +11,9 @@ import NavBar from './components/NavigationBar/NavBar';
 export default function App() {
  
   return (
-    <View style={{ flex: 1 }}>
-      <NavBar style={{ flex: 4 }}/>
-      {/* <HomeHelloScreen style={{ flex: 4 }}/>     */}
+    <View style={{ flex: 1 }}>      
+      {/* <HomeHelloScreen style={{ flex: 1}}/>     */}
+      <NavBar style={{ flex: 1 }}/>
     </View>
   );
 }

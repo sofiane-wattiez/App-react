@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, ScrollView, StatusBar } from 'react-native';
+import { Text, View, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import RegisterLink from '../components/button/registerLink';
 import Separator from '../components/layout/Separator';
+import Logo from '../components/Identity/Logo';
 
 
 const HomeScreen = () => {
@@ -10,22 +11,19 @@ const HomeScreen = () => {
         <SafeAreaView style={styles.Container}>
             <View style={{ flex: 2, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
                 <ScrollView style={styles.ScrollView}>
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
-                        <Image
-                            style={styles.Logo}
-                            source={require('../assets/logo/logo_light-mode.png')}
-                        />
-                    </View>                        
+                    <Logo/>   
+
                     <View style={{ flex: 6, justifyContent: 'center', alignItems: 'center'}}>
                         <Text style={styles.SubtitleH1}>Bienvenue dans votre application d'œnologie</Text>
                         <Text style={styles.SubtitleH2}>Nos meilleurs sélections</Text>
                         <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>                       
                         {/* Articles Get via l'api */}
+                        
                         <Text style={styles.info}>Ici prochainement les articles</Text>
                         <Text style={styles.SubtitleH2}>Les plus appréciés</Text>
                         <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>
-                          {/* Articles Get via l'api */}
-                          <Text style={styles.info}>Ici prochainement les articles</Text>
+                        {/* Articles Get via l'api */}
+                        <Text style={styles.info}>Ici prochainement les articles</Text>
                     </View>                        
                     
                     <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center'}}>
@@ -45,16 +43,15 @@ const HomeScreen = () => {
 }
 
 const styles = StyleSheet.create({
-
+    
     Container: {
         flex: 1,
-        paddingTop: StatusBar.currentHeight,
+        // paddingTop: StatusBar.currentHeight,
     },
     ScrollView: {
         backgroundColor: '#F2E5BD',
         marginHorizontal: 20,
-        marginVertical: 20,
-        marginBottom: 20,
+        // marginBottom: 20,
     },
     SubtitleH1: {
         fontSize: 50,
@@ -86,13 +83,7 @@ const styles = StyleSheet.create({
         // marginVertical: 20,
         
     },
-    Logo: {
-        width: 150,
-        height: 80,
-        margin: 40,
-        alignContent: 'center',
-        justifyContent: 'center'
-    }
+
 });
 
 

@@ -5,7 +5,7 @@ import { View} from 'react-native';
 
 const RegisterLink = () => {
     return (
-    <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}> 
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}> 
         <Button
             title="S'inscrire"
             containerStyle={{
