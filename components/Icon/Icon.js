@@ -10,7 +10,7 @@ export default () => {
                 paddingVertical: 5,
                 flexGrow: 1,
                 }}
-        >
+            >
                 <Icon
                     raised
                     name='smileo'

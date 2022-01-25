@@ -6,7 +6,7 @@ import NavBar from '../NavigationBar/NavBar';
 const ForFreeLink = () => {
    
     return (
-    <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}> 
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}> 
         <Button
             onPress={() => console.log('hello')}
             title="Essai gratuit"
