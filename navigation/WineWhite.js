@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
 
-
 const White = () =>{
   return (
     <View style={{ flex: 1,  backgroundColor: '#F2E5BD' }}>

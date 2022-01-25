@@ -25,5 +25,4 @@ const RegisterLink = () => {
     );
 }
 
-
 export default RegisterLink;

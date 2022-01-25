@@ -3,11 +3,12 @@ import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { View} from 'react-native';
 
-const LoginLink = () => {
+const LogoutLink = () => {
     return (
     <View style={{ flex: 1, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}> 
         <Button
-            title={'Se connecter'}
+        // à finir !
+            title={'Se déconnecter'}
             containerStyle={{
                 width: 200,
                 marginHorizontal: 60,
@@ -24,6 +25,4 @@ const LoginLink = () => {
     );
 }
 
-
-
-export default LoginLink;
+export default LogoutLink;
