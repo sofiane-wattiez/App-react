@@ -12,7 +12,7 @@ export default function App() {
  
   return (
     <View style={{ flex: 1 }}>      
-      {/* <HomeHelloScreen style={{ flex: 1}}/>     */}
+      {/* <HomeHelloScreen style={{ flex: 1}}/>  */}
       <NavBar style={{ flex: 1 }}/>
     </View>
   );
