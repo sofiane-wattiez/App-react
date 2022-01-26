@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import RegisterLink from '../components/button/registerLink';
+import RegisterLink from '../components/button/RegisterLink';
 import Separator from '../components/layout/Separator';
 import Logo from '../components/Identity/Logo';
 
@@ -12,7 +12,7 @@ const HomeScreen = () => {
             <View style={{ flex: 2, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
                 <ScrollView style={styles.ScrollView}>
                     <Logo/>   
-
+                    
                     <View style={{ flex: 6, justifyContent: 'center', alignItems: 'center'}}>
                         <Text style={styles.SubtitleH1}>Bienvenue dans votre application d'œnologie</Text>
                         <Text style={styles.SubtitleH2}>Nos meilleurs sélections</Text>
@@ -37,7 +37,7 @@ const HomeScreen = () => {
                     </View>
                 </ScrollView>
             </View>
-
+        
         </SafeAreaView>
     );
 }
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     SubtitleH2:{
         fontSize: 25,
         color: '#AD160F',
-        fontWeight: 'bolder',
+        // fontWeight: 'bolder',
         textAlign: 'center',
         padding: 30,
     },

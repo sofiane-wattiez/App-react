@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
-import { View} from 'react-native';
+import { View, Alert} from 'react-native';
 
 const LoginLink = () => {
     return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}> 
         <Button
+         onPress={() => Alert.alert('Bientot disponible')} 
             title={'Se connecter'}
             containerStyle={{
                 width: 200,

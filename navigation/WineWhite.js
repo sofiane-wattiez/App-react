@@ -1,9 +1,10 @@
 import React from 'react';
 import { Text, View, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import RegisterLink from '../components/button/registerLink';
+import RegisterLink from '../components/button/RegisterLink';
 import Separator from '../components/layout/Separator';
 import Logo from '../components/Identity/Logo';
+import Articles from '../components/MainContent/Articles';
 
 const White = () =>{
   return (
@@ -17,11 +18,12 @@ const White = () =>{
             <Text style={styles.SubtitleH2}>Nos meilleurs sélections</Text>
             <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>                       
             {/* Articles Get via l'api */}
-            
+            <Articles/>
             <Text style={styles.info}>Ici prochainement les articles</Text>
             <Text style={styles.SubtitleH2}>Les plus appréciés</Text>
             <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>
             {/* Articles Get via l'api */}
+            <Articles/>
             <Text style={styles.info}>Ici prochainement les articles</Text>
         </View>                        
           
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
   SubtitleH2:{
       fontSize: 25,
       color: '#AD160F',
-      fontWeight: 'bolder',
+      // fontWeight: 'bolder',
       textAlign: 'center',
       padding: 30,
   },
