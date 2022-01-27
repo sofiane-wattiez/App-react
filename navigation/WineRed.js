@@ -30,7 +30,7 @@ const Red = () =>{
             
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center'}}>
               <Text style={styles.p}>- Faites connaitre vos productions -</Text>
-              <Text style={styles.SubtitleH2}>Rejoins-nous</Text>
+              <Text style={styles.SubtitleH2}>Rejoignez-nous</Text>
           </View>
           <Separator/>                        
 
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   SubtitleH2:{
       fontSize: 25,
       color: '#AD160F',
-      // fontWeight: 'bolder',
+      fontWeight: 'bold',
       textAlign: 'center',
       padding: 30,
   },

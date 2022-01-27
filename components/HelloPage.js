@@ -5,8 +5,31 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeLink from '../components/MainContent/HomeLink';
 import Icon from '../components/Icon/Icon';
 
-
 // Cette page est notre page d'atterrissage (index in app.js)
+
+// construction de l'affichage header logo
+const Stack = createNativeStackNavigator();
+
+function AppHome() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen
+                    style={styles.background}
+                    name="HomeLink"
+                    component={HomeHelloScreen}
+                    options={{ headerTitle: (props) => <LogoTitle {...props} /> }}
+                />
+                </Stack.Navigator>  
+        </NavigationContainer>
+    );
+}
+
+const styles = StyleSheet.create({
+    background: {
+        backgroundColor: '#F2E5BD',
+    }
+});
 
 // Composition - visuel final 
 function HomeHelloScreen() {
@@ -33,29 +56,5 @@ function LogoTitle() {
         />
     );
 }
-
-const Stack = createNativeStackNavigator();
-
-// construction de l'affichage
-function AppHome() {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen
-                    style={styles.background}
-                    name="HomeLink"
-                    component={HomeHelloScreen}
-                    options={{ headerTitle: (props) => <LogoTitle {...props} /> }}
-                />
-                </Stack.Navigator>  
-        </NavigationContainer>
-    );
-}
-
-const styles = StyleSheet.create({
-    background: {
-        backgroundColor: '#F2E5BD',
-    }
-});
 
 export default AppHome;
