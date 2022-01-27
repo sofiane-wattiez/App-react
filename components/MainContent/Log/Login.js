@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, KeyboardAvoidingView, TextInput, StyleSheet, Text, Platform, TouchableWithoutFeedback,  Button, Keyboard, ScrollView, } from 'react-native';
+import { View, KeyboardAvoidingView, TextInput, ImageBackground, StyleSheet, Text, Platform, TouchableWithoutFeedback,  Button, Keyboard, ScrollView, } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import SubmitButton from '../../button/SubmitButton';
 import { Ionicons } from '@expo/vector-icons';

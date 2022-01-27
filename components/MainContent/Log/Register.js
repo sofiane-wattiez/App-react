@@ -51,7 +51,7 @@ const Register = () => {
                   </View>
                   <TextInput placeholder="N° de siret" style={styles.textInput} />
                   <TextInput placeholder="Nom de l'entreprise" style={styles.textInput} />
-                  <TextInput placeholder="Domaine" style={styles.textInput} />
+                  <TextInput placeholder="Domaine - Appellation" style={styles.textInput} />
                 </View>
                 <View style={styles.btnContainer}>
                   <SubmitButton/>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   ScrollView: {
     backgroundColor: '#F2E5BD',
     marginHorizontal: 10,
-    // marginBottom: 20,
+    paddingBottom: 20,
   },
   inner: {
     padding: 24,
@@ -93,11 +93,9 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     textAlign: 'center',
     lineHeight: 55,
-    marginBottom: 20,
+    marginBottom: 10,
     textAlign:'left',
-    textDecorationLine: "underline",
-    textDecorationStyle: "solid",
-    textDecorationColor: "#AD160F",
+    
 },
 SubtitleH2:{
     fontSize: 15,
@@ -128,6 +126,7 @@ SubtitleH2:{
   btnContainer: {
     color: "white",
     marginTop: 5,
+    marginBottom:60,
     marginHorizontal: 3,
   
   },

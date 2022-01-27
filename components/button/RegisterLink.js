@@ -1,29 +1,59 @@
 import React from 'react';
 import { Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
-import { View, Alert   } from 'react-native';
+import Ripple from 'react-native-material-ripple';
+import { View, Alert, StyleSheet } from 'react-native';
 
-const RegisterLink = () => {
+function RegisterLink ({ navigation }) {
     return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}> 
-        <Button
-            onPress={() => Alert.alert('Bientot disponible')}            
-            title="S'inscrire"
-            containerStyle={{
-                width: 200,
-                marginHorizontal: 60,
-                marginVertical: 20,
-            }}
-            
-            ViewComponent={LinearGradient}
-            linearGradientProps={{
-                colors: [ '#AD160F', '#8c100c' ],
-                start: { x: 0, y: 0.5 },
-                end: { x: 0.5, y: 0.5 },
-            }}
-        />
-    </View>
+        <View style={styles.body}> 
+            <Ripple
+                style={styles.button}
+                rippleColor='#8c100c'
+                rippleOpacity={0.9}
+                rippleDuration={400}
+                rippleSize={90}
+                rippleCentered={false}
+                rippleSequential={true}
+            > 
+                <Button
+                    title="S'inscrire"
+                    onPress={() => navigation.navigate('Register')}    
+                    containerStyle={{
+                        width: 200,
+                        height: 100,
+                        textAlign: 'center',
+                        alignContent:'center',
+                        justifyContent:'center',
+                    }}
+                    
+                    ViewComponent={LinearGradient}
+                    linearGradientProps={{
+                        colors: [ '#AD160F', '#8c100c' ],
+                        start: { x: 0, y: 0.5 },
+                        end: { x: 0.5, y: 0.5 },
+                    }}
+                />
+            </Ripple>
+        </View>
     );
-}
+};
+
+const styles = StyleSheet.create({
+    body: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    button: {
+        width: 200,
+        height: 40,
+        backgroundColor: '#AD160F',
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+});
 
 export default RegisterLink;
