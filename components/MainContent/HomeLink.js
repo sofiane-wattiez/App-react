@@ -8,7 +8,7 @@ import { View } from 'react-native';
 
 
 // construction de l'affichage
-function HomeLink() {
+function HomeLink ({ navigation }) {
     return (
         <View style={{ flex: 1}}>
             {/* Se connecter (pro account => login | new inscription => register) */}

@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import Ripple from 'react-native-material-ripple';
 import { View, Alert, StyleSheet } from 'react-native';
 
-function RegisterLink ({ navigation }) {
+const SubmitButton = () => {
     return (
         <View style={styles.body}> 
             <Ripple
@@ -15,10 +15,10 @@ function RegisterLink ({ navigation }) {
                 rippleSize={90}
                 rippleCentered={false}
                 rippleSequential={true}
-            > 
+            >
                 <Button
-                    title="S'inscrire"
-                    onPress={() => navigation.navigate('Register')}    
+                    title="Connecte toi" 
+                    onPress={() => Alert.alert('Bientot disponible')} 
                     containerStyle={{
                         width: 200,
                         height: 100,
@@ -29,16 +29,15 @@ function RegisterLink ({ navigation }) {
                     
                     ViewComponent={LinearGradient}
                     linearGradientProps={{
-                        colors: [ '#AD160F', '#8c100c' ],
+                        colors: [ '#AD160F', '#511201' ],
                         start: { x: 0, y: 0.5 },
                         end: { x: 0.5, y: 0.5 },
                     }}
                 />
-            </Ripple>
+            </Ripple>        
         </View>
     );
 };
-
 const styles = StyleSheet.create({
     body: {
         flex: 1,
@@ -56,4 +55,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default RegisterLink;
+export default SubmitButton;
