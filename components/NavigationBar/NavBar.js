@@ -13,7 +13,6 @@ const Tab = createBottomTabNavigator();
 
 export default function NavBar() {
   return (
-    <NavigationContainer style={{ flex: 1}}>
       <Tab.Navigator style={{ flex: 1}}
           screenOptions={({ route }) => ({
             tabBarIcon: ({ focused, size, color }) => {
@@ -64,6 +63,5 @@ export default function NavBar() {
         <Tab.Screen name="Rosé" component={WineRose}  />
       </Tab.Navigator>    
   
-    </NavigationContainer>
   );
 } 

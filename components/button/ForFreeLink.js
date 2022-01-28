@@ -29,8 +29,8 @@ const ForFreeLink = () => {
                 marginVertical: 10,
                 }}
             />
-        </Ripple>
-    </View>
+            </Ripple>
+        </View>
     );
 }
 const styles = StyleSheet.create({

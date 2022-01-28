@@ -17,7 +17,7 @@ const SubmitButton = () => {
                 rippleSequential={true}
             >
                 <Button
-                    title="Connecte toi" 
+                    title="Confirmer" 
                     onPress={() => Alert.alert('Bientot disponible')} 
                     containerStyle={{
                         width: 200,
