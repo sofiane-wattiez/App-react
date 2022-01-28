@@ -1,30 +1,49 @@
 import * as React from 'react';
-import { View, Text, Button, Image, StyleSheet, Animated } from 'react-native';
+import { View, Text, Button, Image, StyleSheet, Animated, TouchableOpacity, } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStackNavigator } from '@react-navigation/stack';
 // import HomeLink from '../components/MainContent/HomeLink';
 import Register from '../components/MainContent/Log/Register';
 import Login from '../components/MainContent/Log/Login';
+import NavBar from '../components/NavigationBar/NavBar';
+import Ripple from 'react-native-material-ripple';
+
 
 // Cette page est notre page d'atterrissage (index in app.js)
 
-// Composition - visuel final 
+// 1 - Composition - 
 function HomePage ({ navigation }) {
     return (
-        <View style={{ flex: 3, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
-            <View style={{ flex: 0.25, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
-                <Button
-                    title="Register"
-                    onPress={() => navigation.navigate('Register')}
-                />
-                <Button
-                    title="Login"
-                    onPress={() => navigation.navigate('Login')}
-                />            </View>
-            <View  style={{ flex: 0.5, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>      
-              
-            </View>
+        <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+            <View >
+                <TouchableOpacity style={styles.TouchButton}>  
+                    <Button 
+                        color="#AD160F"   
+                        style={styles.button}
+                        title="Inscription"
+                        onPress={() => navigation.navigate('Register')}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.TouchButton}>  
+                    <Button 
+                        color="#AD160F"
+                        style={styles.button}
+                        title="Se connecter"
+                        onPress={() => navigation.navigate('Login')}
+                    />
+                </TouchableOpacity>   
+                <TouchableOpacity style={styles.TouchButton}>  
+                    <Button 
+                        color="#AD160F"
+                        style={styles.button}
+                        title="Essai gratuit"
+                        onPress={() => navigation.navigate('Free')}
+                    />
+                </TouchableOpacity>
+                    
+            </View>           
+            {/* </View> */}
         </View>
         
     );
@@ -32,18 +51,23 @@ function HomePage ({ navigation }) {
 
 function RegisterPage({ navigation }) {
     return (
-        <View style={{ flex: 3, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
-            <View style={{ flex: 0.25, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
-                <Button
-                    title="Login"
-                    onPress={() => navigation.navigate('Login')}
-                />
-                <Button
-                    title="Home"
-                    onPress={() => navigation.navigate('HomeLink')}
-                />
-            </View>
-            <View  style={{ flex: 0.5, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+            <View  style={styles.bodyButton}>
+            <TouchableOpacity style={styles.TouchButton}>  
+                    <Button color="#AD160F"
+                        style={styles.button}
+                        title="Se connecter"
+                        onPress={() => navigation.navigate('Login')}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.TouchButton}>  
+                    <Button 
+                        color="#AD160F"
+                        style={styles.button}
+                        title="Essai gratuit"
+                        onPress={() => navigation.navigate('Free')}
+                    />
+                </TouchableOpacity>
                 <Register/>
             </View>
         </View>
@@ -53,20 +77,54 @@ function RegisterPage({ navigation }) {
 
 function LoginPage({ navigation}) {
     return (
-        <View style={{ flex: 3, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
-            <View style={{ flex: 0.25, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
-                <Button
-                    title="Home"
-                    onPress={() => navigation.navigate('HomeLink')}
-                />
-                <Button
-                    title="Register"
-                    onPress={() => navigation.navigate('Register')}
-                />
-            </View>
-            <View  style={{ flex: 0.5, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+            <View  style={styles.bodyButton} >
+            <TouchableOpacity style={styles.TouchButton}>  
+                    <Button
+                        style={styles.button}
+                        color="#AD160F"
+                        title="Inscription"
+                        onPress={() => navigation.navigate('Register')}
+                    />
+                </TouchableOpacity>    
+                <TouchableOpacity style={styles.TouchButton}>  
+                    <Button 
+                        style={styles.button}   
+                        color="#AD160F"
+                        title="Essai gratuit"                   
+                        onPress={() => navigation.navigate('Free')}
+                    />
+                </TouchableOpacity>    
                 <Login/>
             </View>
+        </View>
+        
+    );
+}
+function FreePage({ navigation}) {
+    return (
+        <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' , alignSelf: 'stretch' }}>
+            <View style={ styles.bodyButton2}>
+            <TouchableOpacity style={styles.TouchButton}>  
+                    <Button 
+                        color="#AD160F"
+                        style={styles.button}   
+                        title="Se connecter"
+                        onPress={() => navigation.navigate('Login')}
+                    />
+                </TouchableOpacity>    
+                <TouchableOpacity style={styles.TouchButton}>  
+                    <Button 
+                        color="#511201"
+                        style={styles.button}
+                        title="Inscription"
+                        onPress={() => navigation.navigate('Register')}
+                    />
+                </TouchableOpacity>
+            </View>
+            <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignSelf: 'stretch', justifyContent: 'center'}}>
+                <NavBar style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', alignSelf: 'stretch', justifyContent: 'center'}}/>
+            </View>    
         </View>
         
     );
@@ -109,41 +167,81 @@ function AppHome() {
         <Stack.Navigator>
             {/* Ecran Home All Button */}
             <Stack.Screen
-                name="HomeLink"
-                style={styles.background}
+                name="Home"
                 component={HomePage}
-                options={{ headerTitle: (props) => <LogoTitle {...props} /> }}
+                options={{ headerTitle: (props) => <LogoTitle {...props} />}}
             
             />
             {/* Ecran Login */}
             <Stack.Screen
                 name="Login"
-                style={styles.background}
                 component={LoginPage}
-                options={{ headerTitle: (props) => <LogoTitle {...props} /> }}
+                options={{ 
+                    headerTitle: (props) => <LogoTitle {...props} /> ,
+                    headerStyleInterpolator: forFade 
+                }}
             
-            />
-                            {/* ! Faire stack.Screen de For Free account */}
-            
-
+            />            
             {/* Ecran Register  */}
             <Stack.Screen
                 name="Register"
-                style={styles.background}
                 component={RegisterPage}
                 options={{
                     headerTitle: (props) => <LogoTitle {...props} />,
                     headerStyleInterpolator: forFade 
                 }} 
             />
+            <Stack.Screen
+                name="Free"
+                component={FreePage}
+                options={{ 
+                    headerTitle: (props) => <LogoTitle {...props} /> , 
+                    headerStyleInterpolator: forFade 
+                }}
+            
+            />
         </Stack.Navigator>  
     );
 }
 
 const styles = StyleSheet.create({
-    background: {
-        backgroundColor: '#F2E5BD',
-    }
+    
+    bodyButton: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-start',
+        padding: 10,
+        alignSelf: 'stretch', 
+    },   
+
+    bodyButton2: {
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-start',
+        alignSelf: 'stretch', 
+        padding: 10,
+    },
+    TouchButton :{
+        width:150,
+        borderRadius: 2,
+        paddingBottom: 10,
+
+
+    },
+    button: {
+        width: 500,
+        height: 40,
+        // borderRadius: 5,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        // borderColor: '#AD160F',
+        // type: 'outline',
+        // borderWidth:10,
+        // borderColor:'#AD160F',
+        // borderRadius: 2,
+    },
+
 });
 
 // 3 - Export global de la vue final
