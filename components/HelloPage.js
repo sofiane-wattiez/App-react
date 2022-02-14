@@ -7,6 +7,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Register from '../components/MainContent/Log/Register';
 import Login from '../components/MainContent/Log/Login';
 import NavBar from '../components/NavigationBar/NavBar';
+import { StyledEngineProvider } from '@mui/material/styles';
+import MenuSlide from '../components/Header/MenuSlide';
 import Ripple from 'react-native-material-ripple';
 
 
@@ -105,22 +107,13 @@ function FreePage({ navigation}) {
     return (
         <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' , alignSelf: 'stretch' }}>
             <View style={ styles.bodyButton2}>
-            <TouchableOpacity style={styles.TouchButton}>  
-                    <Button 
-                        color="#AD160F"
-                        style={styles.button}   
-                        title="Se connecter"
-                        onPress={() => navigation.navigate('Login')}
-                    />
-                </TouchableOpacity>    
-                <TouchableOpacity style={styles.TouchButton}>  
-                    <Button 
-                        color="#511201"
-                        style={styles.button}
-                        title="Inscription"
-                        onPress={() => navigation.navigate('Register')}
-                    />
-                </TouchableOpacity>
+           
+                <StyledEngineProvider injectFirst>
+                        
+                        <MenuSlide />
+                
+                </StyledEngineProvider>
+            
             </View>
             <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignSelf: 'stretch', justifyContent: 'center'}}>
                 <NavBar style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', alignSelf: 'stretch', justifyContent: 'center'}}/>
