@@ -12,53 +12,52 @@ const Register = () => {
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <SafeAreaView style={styles.Container}>
-          <View style={styles.inner}>              
-            <Text style={styles.header}>Inscription </Text>           
-              <ScrollView style={styles.ScrollView}>
-                <View style={styles.Bloc}>
-                  <Text style={styles.SubtitleH1}>Amateur de vins </Text>
+          <ScrollView style={styles.ScrollView}>
+            <View style={styles.inner}>              
+                <Text style={styles.header}>Inscription </Text>           
+                  <View style={styles.Bloc}>
+                    <Text style={styles.SubtitleH1}>Amateur de vins </Text>
+                      <View style={styles.ArrowDownContainer}>
+                        <Ionicons 
+                            name={'arrow-down-outline'}
+                            size= {80} 
+                            color={'#AD160F'}
+                            alignItems={'center'}
+                            justifyContent={'center'}
+                            style={[styles.box, {
+                              transform: [{ rotate: "45deg" }]
+                            }]} 
+                          /> 
+                        <Text style={styles.SubtitleH2}>Identifiant | Profil</Text>
+                      </View>
+                      <TextInput placeholder="Nom" style={styles.textInput} />
+                      <TextInput placeholder="Mail" style={styles.textInput} />
+                      <TextInput placeholder="Mot de passe" style={styles.textInput} />
+                  </View>
+                  <View style={styles.Bloc}>
+                    <Text style={styles.SubtitleH1}>Compte PRO</Text>                
                     <View style={styles.ArrowDownContainer}>
                       <Ionicons 
-                          name={'arrow-down-outline'}
-                          size= {80} 
-                          color={'#AD160F'}
-                          alignItems={'center'}
-                          justifyContent={'center'}
-                          style={[styles.box, {
-                            transform: [{ rotate: "45deg" }]
-                          }]} 
-                        /> 
-                      <Text style={styles.SubtitleH2}>Identifiant | Profil</Text>
+                        name={'arrow-down-outline'}
+                        size= {80} 
+                        color={'#AD160F'}
+                        alignItems={'center'}
+                        justifyContent={'center'}
+                        style={[styles.box, {
+                          transform: [{ rotate: "-45deg" }]
+                        }]} 
+                      />
+                      <Text style={styles.SubtitleH2}>Professionnel | Producteur</Text>
                     </View>
-                    <TextInput placeholder="Nom" style={styles.textInput} />
-                    <TextInput placeholder="Mail" style={styles.textInput} />
-                    <TextInput placeholder="Mot de passe" style={styles.textInput} />
-                </View>
-                <View style={styles.Bloc}>
-                  <Text style={styles.SubtitleH1}>Compte PRO</Text>                
-                  <View style={styles.ArrowDownContainer}>
-                    <Ionicons 
-                      name={'arrow-down-outline'}
-                      size= {80} 
-                      color={'#AD160F'}
-                      alignItems={'center'}
-                      justifyContent={'center'}
-                      style={[styles.box, {
-                        transform: [{ rotate: "-45deg" }]
-                      }]} 
-                    />
-                    <Text style={styles.SubtitleH2}>Professionnel | Producteur</Text>
+                    <TextInput placeholder="N° de siret" style={styles.textInput} />
+                    <TextInput placeholder="Nom de l'entreprise" style={styles.textInput} />
+                    <TextInput placeholder="Domaine - Appellation" style={styles.textInput} />
                   </View>
-                  <TextInput placeholder="N° de siret" style={styles.textInput} />
-                  <TextInput placeholder="Nom de l'entreprise" style={styles.textInput} />
-                  <TextInput placeholder="Domaine - Appellation" style={styles.textInput} />
-                </View>
-                <View style={styles.btnContainer}>
-                  <SubmitButton/>
-                </View>
-              </ScrollView>          
-          </View> 
-          
+                  <View style={styles.btnContainer}>
+                    <SubmitButton/>
+                  </View>
+            </View> 
+          </ScrollView>          
         </SafeAreaView>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
@@ -72,6 +71,8 @@ const styles = StyleSheet.create({
   },
   Container: {
     flex: 1,
+    // display: flex,
+    // alignItems: 'center',
   },  
   ScrollView: {
     backgroundColor: '#F2E5BD',
@@ -85,7 +86,9 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 36,
-    marginBottom: 48
+    marginBottom: 48,
+    textAlign: 'center',
+  
   },
   SubtitleH1: {
     fontSize: 35,

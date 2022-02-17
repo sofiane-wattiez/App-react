@@ -12,29 +12,31 @@ const Login = () => {
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <SafeAreaView style={styles.Container}>
-          <View style={styles.inner}>              
-            <Text style={styles.header}>Se connecter </Text>
-            <ScrollView style={styles.ScrollView}>
-              <View style={styles.ArrowDownContainer}>
-                <Ionicons 
-                    name={'arrow-down-outline'}
-                    size= {80} 
-                    color={'#AD160F'}
-                    alignItems={'center'}
-                    justifyContent={'center'}
-                    style={[styles.box, {
-                      transform: [{ rotate: "45deg" }]
-                    }]} 
-                  /> 
-                <Text style={styles.p}>Identifiant | Profil</Text>
-              </View>
-              <TextInput placeholder="Mail" style={styles.textInput} />
-              <TextInput placeholder="Mot de passe" style={styles.textInput} />
-              <View style={styles.btnContainer}>
-                <SubmitButton/>
-              </View>
-            </ScrollView>          
-          </View> 
+          <ScrollView style={styles.ScrollView}>
+            <View style={styles.inner}>              
+              <Text style={styles.header}>Se connecter </Text>
+              
+                <View style={styles.ArrowDownContainer}>
+                  <Ionicons 
+                      name={'arrow-down-outline'}
+                      size= {80} 
+                      color={'#AD160F'}
+                      alignItems={'center'}
+                      justifyContent={'center'}
+                      style={[styles.box, {
+                        transform: [{ rotate: "45deg" }]
+                      }]} 
+                    /> 
+                  <Text style={styles.p}>Identifiant | Profil</Text>
+                </View>
+                <TextInput placeholder="Mail" style={styles.textInput} />
+                <TextInput placeholder="Mot de passe" style={styles.textInput} />
+                <View style={styles.btnContainer}>
+                  <SubmitButton/>
+                </View>
+            </View>
+          </ScrollView>          
+ 
         </SafeAreaView>
       </TouchableWithoutFeedback>
     </KeyboardAvoidingView>
@@ -63,7 +65,8 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 36,
-    marginBottom: 48
+    marginBottom: 48,
+    textAlign: 'center',
   },
   p:{
     fontSize: 15,

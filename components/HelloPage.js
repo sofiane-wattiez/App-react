@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { View, Text, Button, Image, StyleSheet, Animated, TouchableOpacity, } from 'react-native';
+import { View, Text, Button, Image, StyleSheet, Animated, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createStackNavigator } from '@react-navigation/stack';
 // import HomeLink from '../components/MainContent/HomeLink';
 import Register from '../components/MainContent/Log/Register';
 import Login from '../components/MainContent/Log/Login';
@@ -81,7 +80,7 @@ function LoginPage({ navigation}) {
     return (
         <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
             <View  style={styles.bodyButton} >
-            <TouchableOpacity style={styles.TouchButton}>  
+                <TouchableOpacity style={styles.TouchButton}>  
                     <Button
                         style={styles.button}
                         color="#AD160F"
@@ -103,11 +102,30 @@ function LoginPage({ navigation}) {
         
     );
 }
-function FreePage({ navigation}) {
+function FreePage({ navigation }) {
     return (
-        <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' , alignSelf: 'stretch' }}>
+        <View style={{ flex: 1, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center' , alignSelf: 'stretch' }}>
             <View style={ styles.bodyButton2}>
-           
+                
+                <TouchableOpacity style={styles.TouchButton}>  
+                        <Button 
+                            color="#AD160F"   
+                            style={styles.button}
+                            title="Inscription"
+                            onPress={() => navigation.navigate('Register')}
+                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.TouchButton}>  
+                        <Button 
+                            color="#AD160F"
+                            style={styles.button}
+                            title="Se connecter"
+                            onPress={() => navigation.navigate('Login')}
+                        />
+                    </TouchableOpacity>
+            </View>
+            <View style={ styles.bodyButton2}>
+                
                 <StyledEngineProvider injectFirst>
                         
                         <MenuSlide />
@@ -115,6 +133,7 @@ function FreePage({ navigation}) {
                 </StyledEngineProvider>
             
             </View>
+
             <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignSelf: 'stretch', justifyContent: 'center'}}>
                 <NavBar style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', alignSelf: 'stretch', justifyContent: 'center'}}/>
             </View>    
@@ -126,29 +145,29 @@ function FreePage({ navigation}) {
 // Définition du logo importé dans écran empilé
 function LogoTitle() {
     return (
-        <Image
-            style={{ width: 100, height: 60 }}
-            source={require('../assets/logo/logo_light-mode.png')}  
-            containerStyle={styles.background}
-        />
+            <Image
+                style={{ width: 80, height: 40, marginBottom:10, }}
+                source={require('../assets/logo/logo_light-mode.png')}  
+                containerStyle={styles.backgroundLogo}
+            />
     );
 }
 
 // Animation de changement d'écran 
     const forFade = ({ current, next }) => {
         const opacity = Animated.add(
-        current.progress,
-        next ? next.progress : 0
-        ).interpolate({
-        inputRange: [0, 1, 2],
-        outputRange: [0, 1, 0],
+            current.progress,
+            next ? next.progress : 0
+            ).interpolate({
+                inputRange: [0, 1, 2],
+                outputRange: [0, 1, 0],
         });
     
         return {
-        leftButtonStyle: { opacity },
-        rightButtonStyle: { opacity },
-        titleStyle: { opacity },
-        backgroundStyle: { opacity },
+            leftButtonStyle: { opacity },
+            rightButtonStyle: { opacity },
+            titleStyle: { opacity },
+            backgroundStyle: { opacity },
         };
     };
 
@@ -162,7 +181,12 @@ function AppHome() {
             <Stack.Screen
                 name="Home"
                 component={HomePage}
-                options={{ headerTitle: (props) => <LogoTitle {...props} />}}
+                options={{ 
+                headerTitle: (props) => <LogoTitle {...props}/>, 
+                // headerStyle: 'backgroundColor: black'
+                
+                headerStyleInterpolator: forFade 
+            }}
             
             />
             {/* Ecran Login */}
@@ -198,7 +222,9 @@ function AppHome() {
 }
 
 const styles = StyleSheet.create({
-    
+    backgroundLogo: {
+        
+    },
     bodyButton: {
         flex: 1,
         flexDirection: 'column',
@@ -209,9 +235,9 @@ const styles = StyleSheet.create({
     },   
 
     bodyButton2: {
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'flex-end',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-around',
         alignSelf: 'stretch', 
         padding: 10,
     },

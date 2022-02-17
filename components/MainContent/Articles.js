@@ -19,7 +19,7 @@ const Articles = () => {
             setDrinks(response.drinks);
         });
     };
-
+    
     const renderItem = ({ item }) => (
         <Item title={item.strDrink} />
     );

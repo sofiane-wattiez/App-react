@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import RegisterLink from '../components/button/RegisterLink';
 import Separator from '../components/layout/Separator';
-import Logo from '../components/Identity/Logo';
+// import Logo from '../components/Identity/Logo';
 import Articles from '../components/MainContent/Articles';
 
 
@@ -12,19 +12,17 @@ const Red = () =>{
     <SafeAreaView style={styles.Container}>
       <View style={{ flex: 2, backgroundColor: '#511201', justifyContent: 'center', alignItems: 'center' }}>
         <ScrollView style={styles.ScrollView}>
-          <Logo/>   
+          {/* <Logo/>    */}
           
           <View style={{ flex: 6, justifyContent: 'center', alignItems: 'center'}}>
-              <Text style={styles.SubtitleH1}>ROUGE</Text>
+              {/* <Text style={styles.SubtitleH1}>*</Text> */}
               <Text style={styles.SubtitleH2}>Nos meilleurs sélections</Text>
               <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>                       
-              {/* Articles Get via l'api */}
               <Articles/>
               <Text style={styles.info}>Ici prochainement les articles</Text>
               <Text style={styles.SubtitleH2}>Les plus appréciés</Text>
               <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>
-              {/* Articles Get via l'api */}
-              {/* <Articles/> */}
+              <Articles/>
               <Text style={styles.info}>Ici prochainement les articles</Text>
           </View>                        
             
@@ -47,13 +45,14 @@ const Red = () =>{
 const styles = StyleSheet.create({
     
   Container: {
-      flex: 1,
-      paddingTop: StatusBar.currentHeight,
+    backgroundColor: '#511201',
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
   },
   ScrollView: {
       backgroundColor: '#511201',
-      marginHorizontal: 20,
-      // marginBottom: 20,
+      marginHorizontal: 10,
+      marginBottom: 20,
   },
   SubtitleH1: {
       fontSize: 50,

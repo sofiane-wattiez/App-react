@@ -3,15 +3,15 @@ import { Text, View, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import RegisterLink from '../components/button/RegisterLink';
 import Separator from '../components/layout/Separator';
-import Logo from '../components/Identity/Logo';
+// import Logo from '../components/Identity/Logo';
 
 
 const HomeScreen = () => {
     return (
         <SafeAreaView style={styles.Container}>
-            <View style={{ flex: 2, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}>
+            {/* <View style={{ flex: 2, backgroundColor: '#F2E5BD', justifyContent: 'center', alignItems: 'center' }}> */}
                 <ScrollView style={styles.ScrollView}>
-                    <Logo/>   
+                    {/* <Logo/>    */}
                     
                     <View style={{ flex: 6, justifyContent: 'center', alignItems: 'center'}}>
                         <Text style={styles.SubtitleH1}>Bienvenue dans votre application d'œnologie</Text>
@@ -36,7 +36,7 @@ const HomeScreen = () => {
                         <RegisterLink/>
                     </View>
                 </ScrollView>
-            </View>
+            {/* </View> */}
         
         </SafeAreaView>
     );
@@ -46,12 +46,13 @@ const styles = StyleSheet.create({
     
     Container: {
         flex: 1,
-        // paddingTop: StatusBar.currentHeight,
+        backgroundColor: '#F2E5BD',
+        paddingTop: StatusBar.currentHeight,
     },
     ScrollView: {
         backgroundColor: '#F2E5BD',
-        marginHorizontal: 20,
-        // marginBottom: 20,
+        paddingHorizontal: 10,
+        marginBottom: 20,
     },
     SubtitleH1: {
         fontSize: 50,

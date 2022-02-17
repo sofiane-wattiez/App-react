@@ -13,8 +13,16 @@ const Tab = createBottomTabNavigator();
 
 export default function NavBar() {
   return (
-      <Tab.Navigator style={{ flex: 1}}
+      <Tab.Navigator style={{ flex: 1}}  
           screenOptions={({ route }) => ({
+            headerStyle: { 
+              backgroundColor: '#fff' 
+            },  
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },     
+            headerTintColor: '#AD160F',
+            
             tabBarIcon: ({ focused, size, color }) => {
               if (route.name === 'Accueil') {
                 return (
@@ -53,11 +61,13 @@ export default function NavBar() {
             },
             tabBarInactiveTintColor: 'grey',
             tabBarActiveTintColor: 'black',
+            activeBackgroundColor:'#F8E8E8',
+            inactiveBackgroundColor:'black',
           })}
-
+         
+      
       >
-        
-        <Tab.Screen name="Accueil" component={HomeScreen}/>
+        <Tab.Screen name="Accueil" component={HomeScreen} />
         <Tab.Screen name="Rouge" component={WineRed}  />
         <Tab.Screen name="Blanc" component={WineWhite} />
         <Tab.Screen name="Rosé" component={WineRose}  />
