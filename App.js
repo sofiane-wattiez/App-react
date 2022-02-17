@@ -28,7 +28,6 @@ export default function App() {
   return (
     <View style={{ flex: 1 }}>      
       <AppLog style={{ flex: 1}}/> 
-      <Text  style={{flex:1}}>TEST INTEGRATION</Text>
       <Text >{datas.title}</Text>
       <Text >{datas.id}</Text>
     </View>
