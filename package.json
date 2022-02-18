@@ -22,8 +22,9 @@
     "@react-navigation/stack": "^6.0.11",
     "axios": "^0.25.0",
     "expo": "~44.0.0",
-    "expo-linear-gradient": "^11.0.0",
+    "expo-linear-gradient": "^11.0.3",
     "expo-status-bar": "~1.2.0",
+    "external-svg-loader": "^1.4.0",
     "link": "^0.1.5",
     "react": "17.0.1",
     "react-dimmer": "^1.0.7",
@@ -35,7 +36,9 @@
     "react-native-material-ripple": "^0.9.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.2",
+    "react-native-svg": "^12.1.1",
     "react-native-web": "^0.17.1",
+    "react-native-webview": "^11.15.0",
     "react-router-dom": "^6.2.1",
     "styled-components": "^5.3.3"
   },
@@ -45,7 +48,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "react-native-svg-transformer": "^1.0.0"
   },
   "private": true
 }

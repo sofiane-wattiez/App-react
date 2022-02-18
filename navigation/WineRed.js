@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import RegisterLink from '../components/button/RegisterLink';
 import Separator from '../components/layout/Separator';
 // import Logo from '../components/Identity/Logo';
+import Svg, { Circle } from 'react-native-svg';
 import Articles from '../components/MainContent/Articles';
 
 
@@ -16,18 +17,27 @@ const Red = () =>{
           
           <View style={{ flex: 6, justifyContent: 'center', alignItems: 'center'}}>
               {/* <Text style={styles.SubtitleH1}>*</Text> */}
+              <Svg style={{ position:'absolute', left:0,  top: -175, zIndex:-1 }} height="100%" width="100%" viewBox="0 0 100 100" >                            
+                <Circle cx="30" cy="30" r="50" strokeWidth=".3" fill="#ad160f73" />
+              </Svg>
               <Text style={styles.SubtitleH2}>Nos meilleurs sélections</Text>
               <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>                       
               <Articles/>
               <Text style={styles.info}>Ici prochainement les articles</Text>
               <Text style={styles.SubtitleH2}>Les plus appréciés</Text>
+              <Svg style={{ position:'absolute', left:0,  top: 375, zIndex:-1 }} height="50%" width="50%" viewBox="0 0 100 100" >                            
+                <Circle cx="30" cy="30" r="50" strokeWidth=".3" fill="#cd3029a1" />
+              </Svg>
               <Text style={styles.p}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</Text>
               <Articles/>
               <Text style={styles.info}>Ici prochainement les articles</Text>
+              <Svg style={{ position:'absolute', left:0,  bottom: 0, zIndex:-1 }} height="100%" width="100%" viewBox="0 0 100 100" >                            
+                <Circle cx="30" cy="30" r="50" strokeWidth=".3" fill="#ad160f73" />
+              </Svg>
           </View>                        
             
           <View style={{ flex: 0.5, justifyContent: 'center', alignItems: 'center'}}>
-              <Text style={styles.p}>- Faites connaitre vos productions -</Text>
+              <Text style={styles.p2}>- Faites connaitre vos productions -</Text>
               <Text style={styles.SubtitleH2}>Rejoignez-nous</Text>
           </View>
           <Separator/>                        
@@ -65,17 +75,25 @@ const styles = StyleSheet.create({
       fontSize: 25,
       color: '#AD160F',
       fontWeight: 'bold',
-      textAlign: 'center',
-      padding: 30,
+      textAlign: 'left',
+      padding: 10,
   },
   p:{
       fontSize: 20,
       color: '#ffffff',
       textAlign: 'left',
-      marginBottom: 20,
-      marginVertical: 20,
-      
+      padding: 30,
+  
   },
+  p2:{
+    fontSize: 15,
+    color: '#ffffff',
+    textAlign: 'left',
+    marginBottom: 20,
+    marginVertical: 20,
+    padding: 30,
+
+},
   info:{
       fontSize: 20,
       color: '#000000',

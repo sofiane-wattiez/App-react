@@ -4,30 +4,30 @@ import Item from '../layout/Item/Item';
 
 const Articles = () => {
     
-    const [drinks, setDrinks] = useState([]);
+    const [WineRed, setWineRed] = useState([]);
 
     useEffect(() => {
-        getDrinks();
+        getWineRed();
     }, []);
-
-    const getDrinks = () => {
-        fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+    
+    const getWineRed = () => {
+        fetch('https://127.0.0.1:8000/api/wine_reds?page=1')
         .then (function(response){
             return response.json();
         
         }).then(function(response) {
-            setDrinks(response.drinks);
+            setWineRed(response.WineRed);
         });
     };
     
     const renderItem = ({ item }) => (
-        <Item title={item.strDrink} />
+        <Item title={item.wineName} />
     );
     
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
-                data={drinks}
+                data={WineRed}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
             />

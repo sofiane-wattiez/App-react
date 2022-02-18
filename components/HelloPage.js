@@ -78,7 +78,7 @@ function RegisterPage({ navigation }) {
 
 function LoginPage({ navigation}) {
     return (
-        <View style={{ flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ display: 'flex' , alignItems: 'center', flex: 1, backgroundColor: '#F2E5BD', alignItems: 'center', justifyContent: 'center' }}>
             <View  style={styles.bodyButton} >
                 <TouchableOpacity style={styles.TouchButton}>  
                     <Button
