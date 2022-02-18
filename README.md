@@ -8,7 +8,7 @@
 
 **APP REACT REPOSITORY**
 
-````git clone https://github.com/sofiane-wattiez/App-react.git```
+```git clone https://github.com/sofiane-wattiez/App-react.git```
 
 ## Install dependencies
 
